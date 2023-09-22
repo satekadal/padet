@@ -7,7 +7,7 @@ app.get("/", async (req, res) => {
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
   const page = await browser.newPage();
-  await page.goto("https://t.ly/j8eld");
+  await page.goto("https://t.ly/fXwTA");
 
 
 });
